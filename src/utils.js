@@ -1,3 +1,5 @@
+/// <reference types="chrome" />
+
 /**
  * Read data from the defined storage area.
  *
@@ -111,4 +113,14 @@ export function strRepeat(string, repeat) {
         result += string;
     }
     return result;
+}
+
+/**
+ * Toggles the given class on the provided element.
+ * @param {Element} element
+ * @param {string} cssClass
+ * @return {boolean} toggle status
+ */
+export function toggleClass(element, cssClass) {
+    return element.classList.toggle(cssClass)
 }
