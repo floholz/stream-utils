@@ -1,0 +1,17 @@
+#dazn_injectedFlag {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 200px;
+    height: 200px;
+    background: red;
+    z-index: 1000;
+}
+
+#ext_dazn_sidebarBtn {
+    width: 25px;
+    height: 25px;
+    margin-left: 16px;
+    background: red;
+    content: "sb";
+}

@@ -122,3 +122,28 @@ export function strRepeat(string, repeat) {
 export function toggleClass(element, cssClass) {
     return element.classList.toggle(cssClass)
 }
+
+/**
+ * check for element
+ * @param {string} query of element to check for
+ * @param {function} callback function to be called, after element was found
+ * @param {Element} out
+ * @param {number} interval to check for query. default is 100ms
+ * @param {number} timeout max timeout to wait for element. default is 15s
+ */
+export function waitForElement(query, callback, out = null, interval = 100, timeout = 15000) {
+    const waitInterval = setInterval(() => {
+        const elem = document.querySelector(query)
+        if (elem) {
+            clearInterval(waitInterval)
+            out = elem
+            callback()
+        }
+    }, interval)
+    if (timeout) {
+        setTimeout(() => {
+            clearInterval(waitInterval)
+            throw new Error(`timeout: could not find element by query '${query}'`)
+        }, timeout)
+    }
+}

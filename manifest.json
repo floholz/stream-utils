@@ -30,6 +30,12 @@
       "matches": [
         "https://video.pdc.tv/*"
       ]
+    },
+    {
+      "matches": ["https://*.dazn.com/*/*"],
+      "js": ["src/content/dazn/dazn.js"],
+      "css": ["src/content/dazn/dazn.css"],
+      "type": "module"
     }
   ],
   "web_accessible_resources": [
