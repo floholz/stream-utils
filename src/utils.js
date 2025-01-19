@@ -1,5 +1,3 @@
-/// <reference types="chrome" />
-
 /**
  * Read data from the defined storage area.
  *
